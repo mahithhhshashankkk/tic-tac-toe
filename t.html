@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enhanced Tic-Tac-Toe</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  
+  <link rel="stylesheet" href="t.css">
+  
+</head>
+<body>
+  <div class="stars"></div>
+  <div class="floating-particles">
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+  
+  <div class="game-wrapper">
+    <div class="game-container">
+      <div class="header">
+        <h1 class="game-title">
+          <i class="fas fa-gamepad"></i>
+          TIC-TAC-TOE
+          <i class="fas fa-gamepad"></i>
+        </h1>
+        <div class="neon-line"></div>
+      </div>
+      
+      <div class="game-info">
+        <div id="status" class="status-display">
+          <span class="player-indicator">Player</span>
+          <span id="current-player" class="current-player player-x">X</span>
+          <span class="turn-text">'s Turn</span>
+        </div>
+        
+        <div class="score-board">
+          <div class="score-item">
+            <span class="score-label">X WINS</span>
+            <span class="score-value" id="score-x">0</span>
+          </div>
+          <div class="score-divider"></div>
+          <div class="score-item">
+            <span class="score-label">O WINS</span>
+            <span class="score-value" id="score-o">0</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="board-wrapper">
+        <div class="board" id="board">
+          <div class="cell" data-index="0"><div class="cell-content"></div></div>
+          <div class="cell" data-index="1"><div class="cell-content"></div></div>
+          <div class="cell" data-index="2"><div class="cell-content"></div></div>
+          <div class="cell" data-index="3"><div class="cell-content"></div></div>
+          <div class="cell" data-index="4"><div class="cell-content"></div></div>
+          <div class="cell" data-index="5"><div class="cell-content"></div></div>
+          <div class="cell" data-index="6"><div class="cell-content"></div></div>
+          <div class="cell" data-index="7"><div class="cell-content"></div></div>
+          <div class="cell" data-index="8"><div class="cell-content"></div></div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button id="reset" class="btn btn-reset">
+          <i class="fas fa-redo-alt"></i>
+          <span>Reset Game</span>
+        </button>
+        <button id="new-game" class="btn btn-new-game">
+          <i class="fas fa-plus"></i>
+          <span>New Game</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Enhanced Win Modal -->
+    <div id="win-modal" class="modal">
+      <div class="modal-content">
+        <div class="winner-display">
+          <div id="winner-icon" class="winner-icon"></div>
+          <h2 id="winner-text" class="winner-text"></h2>
+          <div class="celebration-particles"></div>
+        </div>
+        <button id="play-again" class="btn btn-play-again">
+          <i class="fas fa-play"></i>
+          <span>Play Again</span>
+        </button>
+      </div>
+    </div>
+    
+    <div id="fireworks" class="fireworks"></div>
+  </div>
+
+    <script src="t.js"></script>
+</body>
+</html>
